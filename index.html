@@ -2,19 +2,10 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="HawkEye: Practical In-Flight Obstacle Avoidance with Event Camera and LiDAR Fusion">
-  <meta name="keywords" content="LiDAR, Event Camera, Drone, Obstacle Avoidance">
+  <meta name="description" content="SCOPE: Skeleton Graph-Based Computation-Efficient Framework for Autonomous UAV Exploration">
+  <meta name="keywords" content="UAV, Drone, Autonomous Exploration, SLAM">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>[MobiCom 2025] HawkEye: Practical In-Flight Obstacle Avoidance with Event Camera and LiDAR Fusion</title>
-
-  <!-- Google Analytics (optional) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-PYVRSFMDRL');
-  </script>
+  <title>SCOPE: Skeleton Graph-Based Computation-Efficient Framework for Autonomous UAV Exploration</title>
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="./static/css/bulma.min.css">
@@ -63,68 +54,8 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">HawkEye: Practical In-Flight Obstacle Avoidance with Event Camera and LiDAR Fusion</h1>
-          
-          <!-- START: Beautified author and affiliation block with fine-tuned spacing -->
-          <div class="is-size-5 publication-authors">
-            
-            <!-- Updated submission number -->
-            <h2 class="title is-4" id="submission-line">ACM MobiCom 2025 Demo Submission #63</h2>
-            
-            <!-- Custom styles for perfect spacing and alignment -->
-            <style>
-              /* Controls the space above and below the "ACM MobiCom..." line */
-              #submission-line {
-                color: #6e6e6e;
-                margin-top: 1.5rem;
-                margin-bottom: 1.25rem;
-              }
+          <h1 class="title is-1 publication-title">SCOPE: Skeleton Graph-Based Computation-Efficient Framework for Autonomous UAV Exploration</h1>
 
-              /* Controls the space below the author names */
-              .author-block {
-                margin-bottom: 0.75rem;
-              }
-
-              /* Styles for the affiliation block */
-              .affiliations-block {
-                /* KEY CHANGE: Align text inside the block to the center */
-                text-align: center;
-                
-                font-size: 0.9em;
-                color: #4a4a4a;
-              }
-            </style>
-            
-            <!-- Author names with superscripts -->
-            <div class="author-block">
-              <span>Wenhua Ding<sup>1</sup>,</span>
-              <span>Zhengli Zhang<sup>1</sup>,</span>
-              <span>Xin Xu<sup>1</sup>,</span>
-              <span>Haoyang Wang<sup>1</sup>,</span>
-              <span>Yinan Zhu<sup>2</sup>,</span>
-              <br> <!-- Line break for better readability -->
-              <span>Shilong Ji<sup>1</sup>,</span>
-              <span>Xin Zhou<sup>3</sup>,</span>
-              <span>Jingao Xu<sup>4</sup>,</span>
-              <span>Dongyue Huang<sup>1</sup>,</span>
-              <span>Xinlei Chen<sup>1</sup></span>
-            </div>
-
-            <!-- All affiliations now in a two-line block -->
-            <div class="affiliations-block">
-              <!-- HTML structure remains the same -->
-              <div>
-                <sup>1</sup>SIGS, Tsinghua University, 
-                <sup>2</sup>South China University of Technology,
-              </div>
-              <div>
-                <sup>3</sup>Hong Kong University of Science and Technology, 
-                <sup>4</sup>Carnegie Mellon University
-              </div>
-            </div>
-
-          </div>
-          <!-- END: Beautified author and affiliation block with fine-tuned spacing -->
 
           <div class="column has-text-centered" style="margin-top: 2rem;">
             <div class="publication-links">
@@ -145,41 +76,21 @@
     <div class="hero-body">
       <div class="columns is-centered">
         <div class="column is-full has-text-centered">
-          <h2 class="title is-3">Indoor Experiments</h2>
+          <h2 class="title is-3">Video</h2>
           <!-- 
             KEY CHANGE: Reduced margin-bottom from 2rem to 0.
             Now the space is controlled solely by the .content-media class's top margin (1.5rem),
             which is a much more reasonable distance.
           -->
-          <h3 class="subtitle has-text-centered" style="margin-top: -0.5rem; margin-bottom: 0;">
-            We conducted indoor tests by randomly throwing objects such as a soccer ball and a badminton shuttlecock.
-          </h3>
         </div>
       </div>
 
       <!-- Media content for indoor experiments -->
       <!-- The content-media class itself provides a 1.5rem top margin, which is now the only space -->
       <video class="content-media" autoplay muted loop playsinline>
-        <source src="./static/videos/indoor.mp4" type="video/mp4">
+        <source src="./static/videos/video4.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
-      <img src="./static/images/indoor.png" alt="Diagram of indoor experiment scenarios with drone maneuvers" class="content-media">
-
-      <!-- Description of indoor experiments -->
-      <div class="columns is-centered">
-        <div class="column is-four-fifths">
-          <div class="content has-text-justified" style="margin-top: 2rem;"> <!-- Added margin-top for space -->
-            <p>
-              <strong>Situation I: Reactive Avoidance.</strong>
-              As shown in the lower part of the figure, when an object is detected at a safe distance (e.g., a badminton shuttlecock at >1m), HawkEye autonomously plans and executes a smooth "Turn Right" trajectory, bypassing the obstacle without interrupting its flight path.
-            </p>
-            <p>
-              <strong>Situation II: Emergency Braking.</strong>
-              In the upper part of the figure, upon detecting a fast-approaching object (e.g., a soccer ball) within a critical proximity (&lt;1m, marked by the red arrow), HawkEye autonomously triggers an immediate "Brake" command to halt the UAV and prevent a collision.
-            </p>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -192,8 +103,7 @@
       <div class="column is-four-fifths has-text-centered">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          Drones are increasingly used in applications such as last-mile delivery and infrastructure inspection, but their safe operation, especially in high-speed scenarios, remains a critical challenge. Existing vision- and LiDAR-based obstacle localization methods suffer from motion blur, latency, and low spatio-temporal resolution, making them inadequate for detecting and tracking fast-moving objects. In this work, we present HawkEye, a drone obstacle avoidance system that fuses event cameras and LiDAR to achieve high-frequency, accurate 3D tracking of dynamic objects. By leveraging the complementary strengths of both sensors, HawkEye enables robust real-time sensing and safe evasive maneuvers, addressing a key requirement for the large-scale deployment of autonomous drones.
-        </div>
+          Autonomous exploration in unknown environments is key for mobile robots, helping them perceive, map, and make decisions in complex, large areas. However, current methods still struggle with problems of high computational costs and inefficient global guidance, especially in real-world settings. To address these limitations, we propose a novel autonomous exploration framework named as SCOPE. It incrementally constructs a real-time skeletal graph to represent the spatial environment for guiding subsequent planning. The planning layer of the framework comprises two main components: the Proximal Planner, which efficiently generates exploration routes in the vicinity of the UAV, and the Region-Sequence Planner, which optimizes the visitation order across the entire environment. Comparative evaluations in simulation environments demonstrate that our method maintains exploration efficiency while reducing computational cost by an average of 86.9\% compared to baseline approaches. Real-world experiments further validate the effectiveness of our method in practical scenarios. We will release the source code to the community.        </div>
       </div>
     </div>
   </div>
@@ -201,27 +111,17 @@
 
 <hr>
 
-<!-- System Overview Section -->
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-four-fifths has-text-centered">
-        <h2 class="title is-3">System Overview</h2>
+        <h2 class="title is-3">System Framework</h2>
         <div class="content has-text-justified">
-          <!-- Replaced <p> tags with a semantic list for clarity -->
-          <ul>
-            <li><b>Stage 1: Event-Based 2D Motion Tracking.</b><br>
-              The pipeline begins by processing the raw event stream to extract a dense optical flow field that captures fine-grained motion information. This capability enables reliable segmentation of dynamic objects, continuous tracking of their 2-D trajectories, and high‑frequency velocity estimation.
-            </li>
-            <li style="margin-top: 1em;"><b>Stage 2: Event-Guided LiDAR Motion Compensation.</b><br>
-              Sparse LiDAR points, each associated with a unique timestamp, are then corrected for motion distortion. This de-smearing process is guided by velocity vectors estimated from the event stream, yielding a physically accurate point cloud of the object at a unified reference time.
-            </li>
-            <li style="margin-top: 1em;"><b>Stage 3: 3D Trajectory Generation.</b><br>
-              Finally, the 2D trajectory is fused with the motion-compensated point cloud. A depth value is assigned to each 2D track point by associating it with the nearest 3D points in the cloud, resulting in a high-fidelity 3D trajectory that accurately captures the object's spatial position and motion over time.
-            </li>
-          </ul>
+          <p>
+          SCOPE is an autonomous exploration framework that builds a skeletal graph of free space to understand 3D structure and obstacle distribution. It analyzes unknown regions to identify key exploration targets and plan efficiently. The proximal planner focuses on local exploration and isolated areas, while the region-sequence planner provides global guidance based on the skeletal graph, achieving efficient large-scale exploration.          </p>
         </div>
-        <img src="./static/images/system2.png" alt="HawkEye system pipeline diagram showing the three stages of fusion" class="content-media">
+        <!-- Replace embedded PDF with a JPEG image -->
+        <img src="./static/images/framework.jpeg" alt="System Framework" width="100%" style="border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
       </div>
     </div>
   </div>
@@ -234,13 +134,12 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-four-fifths has-text-centered">
-        <h2 class="title is-3">Implementation and Experiments Setup</h2>
+        <h2 class="title is-3">Simulation Experiment</h2>
         <div class="content has-text-justified">
           <p>
-            Our system is deployed on a custom-built UAV, with the hardware configuration shown below. The onboard computation is performed by an Intel NUC 12. The perception module integrates two primary sensors: (1) a Prophesee EVK4 HD event camera equipped with a 1280×720 Sony IMX636ES sensor, and (2) a MID-360 LiDAR, which provides 360° horizontal field-of-view depth measurements. As shown in the right panel of the figure, the dynamic target objects (a ball and a die) are equipped with reflective markers to facilitate ground-truth validation.
-          </p>
+          SCOPE demonstrates superior exploration efficiency in complex environments, achieving faster coverage with significantly lower computational cost. In the Complex Office scenario, it reduces exploration time by 10.9% and computation by 78.8% compared to state-of-the-art methods, sustaining smooth and stable flight without redundant maneuvers.          </p>
         </div>
-        <img src="./static/images/implementation.png" alt="Hardware setup showing the custom-built UAV with event camera, LiDAR, and target objects" class="content-media">
+        <img src="./static/images/simulation.jpeg" class="content-media">
       </div>
     </div>
   </div>
@@ -248,48 +147,39 @@
 
 <hr>
 
-<!-- Outdoor Evaluation Section (Corrected and Refactored) -->
+<!-- Real-World Experiment Section -->
 <section class="section">
   <div class="container is-max-desktop">
-    <!-- Block 1: Title and Text -->
+
+    <!-- Block 1: Experiment Setup -->
     <div class="columns is-centered">
       <div class="column is-four-fifths has-text-centered">
-        <h2 class="title is-3">Outdoor Evaluation</h2>
+        <h2 class="title is-3">Real-World Experiments</h2>
         <div class="content has-text-justified">
           <p>
-            We achieved a 100% success rate in obstacle depth estimation within the field of view, accomplished by throwing balls at various speeds and angles against a complex forest background.
+            We evaluated SCOPE on a real UAV platform to verify its feasibility for autonomous exploration. The UAV was equipped with an onboard Jetson Orin NX for computation, an Intel T265 for real-time pose estimation, an Intel D435i for depth sensing, and a PX4 flight controller for motion control.
           </p>
         </div>
-      </div>
-    </div>
-    
-      
-<!-- Block 2: Image (Resized) -->
-    <div class="columns is-centered">
-      <!-- 
-        By changing 'is-full' to 'is-four-fifths', the column becomes narrower (80% width),
-        and the image inside it scales down automatically while staying centered.
-        This is a cleaner and more responsive approach.
-      -->
-      <div class="column is-four-fifths">
-        <img src="./static/images/outdoor_path.png" alt="3D object trajectory plot from outdoor evaluation" class="content-media">
+        <img src="./static/images/uav.jpeg" alt="UAV experimental setup in outdoor environment" class="content-media" style="margin-top: 1rem;">
       </div>
     </div>
 
-    
-
-    <!-- Block 3: Video -->
-    <div class="columns is-centered">
-      <div class="column is-full has-text-centered">
-        <h4 class="title is-4" style="margin-top: 2rem;">Experiments Video</h4>
-        <video autoplay muted loop playsinline class="content-media">
-          <source src="./static/videos/outdoor_fusion.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
+    <!-- Block 2: Experiment Results -->
+    <div class="columns is-centered" style="margin-top: 3rem;">
+      <div class="column is-four-fifths has-text-centered">
+        <h4 class="title is-4">Experiment Results</h4>
+        <div class="content has-text-justified">
+          <p>
+            SCOPE was tested in multiple real-world environments, ranging from narrow mock-up passages to cluttered offices with dense furniture and complex occlusions. The framework effectively guided the UAV through tight spaces, prioritized hard-to-reach regions, and adapted to unstructured layouts. Across all scenarios, it maintained smooth navigation, comprehensive coverage, and low computational overhead, demonstrating robust performance in challenging real-world conditions.          </p>
+        </div>
+        <img src="./static/images/real.jpeg" alt="UAV trajectory and obstacle interaction in outdoor experiment" class="content-media" style="margin-top: 1rem;">
       </div>
     </div>
+
   </div>
 </section>
+<hr>
+
 
 <footer class="footer">
   <div class="container">
