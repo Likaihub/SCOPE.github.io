@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="HawkEye: Practical In-Flight Obstacle Avoidance with Event Camera and LiDAR Fusion">
+  <meta name="keywords" content="LiDAR, Event Camera, Drone, Obstacle Avoidance">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>[MobiCom 2025] HawkEye: Practical In-Flight Obstacle Avoidance with Event Camera and LiDAR Fusion</title>
+
+  <!-- Google Analytics (optional) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <!-- Custom Styles for consistent media presentation -->
+  <style>
+    .content-media {
+      width: 100%;
+      max-width: 900px; /* Adjust max-width as needed */
+      margin: 1.5rem auto; /* Add some space around media */
+      display: block;
+      border-radius: 12px; /* Consistent rounded corners */
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    }
+  </style>
+
+  <!-- JavaScript -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+</nav>
+
+      
+      
+<!-- Title Section -->
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">HawkEye: Practical In-Flight Obstacle Avoidance with Event Camera and LiDAR Fusion</h1>
+          
+          <!-- START: Beautified author and affiliation block with fine-tuned spacing -->
+          <div class="is-size-5 publication-authors">
+            
+            <!-- Updated submission number -->
+            <h2 class="title is-4" id="submission-line">ACM MobiCom 2025 Demo Submission #63</h2>
+            
+            <!-- Custom styles for perfect spacing and alignment -->
+            <style>
+              /* Controls the space above and below the "ACM MobiCom..." line */
+              #submission-line {
+                color: #6e6e6e;
+                margin-top: 1.5rem;
+                margin-bottom: 1.25rem;
+              }
+
+              /* Controls the space below the author names */
+              .author-block {
+                margin-bottom: 0.75rem;
+              }
+
+              /* Styles for the affiliation block */
+              .affiliations-block {
+                /* KEY CHANGE: Align text inside the block to the center */
+                text-align: center;
+                
+                font-size: 0.9em;
+                color: #4a4a4a;
+              }
+            </style>
+            
+            <!-- Author names with superscripts -->
+            <div class="author-block">
+              <span>Wenhua Ding<sup>1</sup>,</span>
+              <span>Zhengli Zhang<sup>1</sup>,</span>
+              <span>Xin Xu<sup>1</sup>,</span>
+              <span>Haoyang Wang<sup>1</sup>,</span>
+              <span>Yinan Zhu<sup>2</sup>,</span>
+              <br> <!-- Line break for better readability -->
+              <span>Shilong Ji<sup>1</sup>,</span>
+              <span>Xin Zhou<sup>3</sup>,</span>
+              <span>Jingao Xu<sup>4</sup>,</span>
+              <span>Dongyue Huang<sup>1</sup>,</span>
+              <span>Xinlei Chen<sup>1</sup></span>
+            </div>
+
+            <!-- All affiliations now in a two-line block -->
+            <div class="affiliations-block">
+              <!-- HTML structure remains the same -->
+              <div>
+                <sup>1</sup>SIGS, Tsinghua University, 
+                <sup>2</sup>South China University of Technology,
+              </div>
+              <div>
+                <sup>3</sup>Hong Kong University of Science and Technology, 
+                <sup>4</sup>Carnegie Mellon University
+              </div>
+            </div>
+
+          </div>
+          <!-- END: Beautified author and affiliation block with fine-tuned spacing -->
+
+          <div class="column has-text-centered" style="margin-top: 2rem;">
+            <div class="publication-links">
+              <!-- Links (e.g., PDF, Code) will go here -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    
+
+
+<!-- Indoor Experiments Section -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="columns is-centered">
+        <div class="column is-full has-text-centered">
+          <h2 class="title is-3">Indoor Experiments</h2>
+          <!-- 
+            KEY CHANGE: Reduced margin-bottom from 2rem to 0.
+            Now the space is controlled solely by the .content-media class's top margin (1.5rem),
+            which is a much more reasonable distance.
+          -->
+          <h3 class="subtitle has-text-centered" style="margin-top: -0.5rem; margin-bottom: 0;">
+            We conducted indoor tests by randomly throwing objects such as a soccer ball and a badminton shuttlecock.
+          </h3>
+        </div>
+      </div>
+
+      <!-- Media content for indoor experiments -->
+      <!-- The content-media class itself provides a 1.5rem top margin, which is now the only space -->
+      <video class="content-media" autoplay muted loop playsinline>
+        <source src="./static/videos/indoor.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <img src="./static/images/indoor.png" alt="Diagram of indoor experiment scenarios with drone maneuvers" class="content-media">
+
+      <!-- Description of indoor experiments -->
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <div class="content has-text-justified" style="margin-top: 2rem;"> <!-- Added margin-top for space -->
+            <p>
+              <strong>Situation I: Reactive Avoidance.</strong>
+              As shown in the lower part of the figure, when an object is detected at a safe distance (e.g., a badminton shuttlecock at >1m), HawkEye autonomously plans and executes a smooth "Turn Right" trajectory, bypassing the obstacle without interrupting its flight path.
+            </p>
+            <p>
+              <strong>Situation II: Emergency Braking.</strong>
+              In the upper part of the figure, upon detecting a fast-approaching object (e.g., a soccer ball) within a critical proximity (&lt;1m, marked by the red arrow), HawkEye autonomously triggers an immediate "Brake" command to halt the UAV and prevent a collision.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<hr>
+
+<!-- Abstract Section -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths has-text-centered">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          Drones are increasingly used in applications such as last-mile delivery and infrastructure inspection, but their safe operation, especially in high-speed scenarios, remains a critical challenge. Existing vision- and LiDAR-based obstacle localization methods suffer from motion blur, latency, and low spatio-temporal resolution, making them inadequate for detecting and tracking fast-moving objects. In this work, we present HawkEye, a drone obstacle avoidance system that fuses event cameras and LiDAR to achieve high-frequency, accurate 3D tracking of dynamic objects. By leveraging the complementary strengths of both sensors, HawkEye enables robust real-time sensing and safe evasive maneuvers, addressing a key requirement for the large-scale deployment of autonomous drones.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<!-- System Overview Section -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths has-text-centered">
+        <h2 class="title is-3">System Overview</h2>
+        <div class="content has-text-justified">
+          <!-- Replaced <p> tags with a semantic list for clarity -->
+          <ul>
+            <li><b>Stage 1: Event-Based 2D Motion Tracking.</b><br>
+              The pipeline begins by processing the raw event stream to extract a dense optical flow field that captures fine-grained motion information. This capability enables reliable segmentation of dynamic objects, continuous tracking of their 2-D trajectories, and high‑frequency velocity estimation.
+            </li>
+            <li style="margin-top: 1em;"><b>Stage 2: Event-Guided LiDAR Motion Compensation.</b><br>
+              Sparse LiDAR points, each associated with a unique timestamp, are then corrected for motion distortion. This de-smearing process is guided by velocity vectors estimated from the event stream, yielding a physically accurate point cloud of the object at a unified reference time.
+            </li>
+            <li style="margin-top: 1em;"><b>Stage 3: 3D Trajectory Generation.</b><br>
+              Finally, the 2D trajectory is fused with the motion-compensated point cloud. A depth value is assigned to each 2D track point by associating it with the nearest 3D points in the cloud, resulting in a high-fidelity 3D trajectory that accurately captures the object's spatial position and motion over time.
+            </li>
+          </ul>
+        </div>
+        <img src="./static/images/system2.png" alt="HawkEye system pipeline diagram showing the three stages of fusion" class="content-media">
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<!-- Implementation Section -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths has-text-centered">
+        <h2 class="title is-3">Implementation and Experiments Setup</h2>
+        <div class="content has-text-justified">
+          <p>
+            Our system is deployed on a custom-built UAV, with the hardware configuration shown below. The onboard computation is performed by an Intel NUC 12. The perception module integrates two primary sensors: (1) a Prophesee EVK4 HD event camera equipped with a 1280×720 Sony IMX636ES sensor, and (2) a MID-360 LiDAR, which provides 360° horizontal field-of-view depth measurements. As shown in the right panel of the figure, the dynamic target objects (a ball and a die) are equipped with reflective markers to facilitate ground-truth validation.
+          </p>
+        </div>
+        <img src="./static/images/implementation.png" alt="Hardware setup showing the custom-built UAV with event camera, LiDAR, and target objects" class="content-media">
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<!-- Outdoor Evaluation Section (Corrected and Refactored) -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Block 1: Title and Text -->
+    <div class="columns is-centered">
+      <div class="column is-four-fifths has-text-centered">
+        <h2 class="title is-3">Outdoor Evaluation</h2>
+        <div class="content has-text-justified">
+          <p>
+            We achieved a 100% success rate in obstacle depth estimation within the field of view, accomplished by throwing balls at various speeds and angles against a complex forest background.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+      
+<!-- Block 2: Image (Resized) -->
+    <div class="columns is-centered">
+      <!-- 
+        By changing 'is-full' to 'is-four-fifths', the column becomes narrower (80% width),
+        and the image inside it scales down automatically while staying centered.
+        This is a cleaner and more responsive approach.
+      -->
+      <div class="column is-four-fifths">
+        <img src="./static/images/outdoor_path.png" alt="3D object trajectory plot from outdoor evaluation" class="content-media">
+      </div>
+    </div>
+
+    
+
+    <!-- Block 3: Video -->
+    <div class="columns is-centered">
+      <div class="column is-full has-text-centered">
+        <h4 class="title is-4" style="margin-top: 2rem;">Experiments Video</h4>
+        <video autoplay muted loop playsinline class="content-media">
+          <source src="./static/videos/outdoor_fusion.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p class="has-text-centered">
+            Website template from <a href="https://github.com/nerfies/nerfies.github.io" target="_blank">Nerfies</a>, licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0 License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
