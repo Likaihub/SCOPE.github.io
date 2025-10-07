@@ -1,3 +1,3 @@
-# HawkEye
+# SCOPE
 
-This is the repository that contains source code for the [HawkEye website](https://wenhua00.github.io/HawkEye/).
+This is the repository that contains source code for the [SCOPE website](https://likaihub.github.io/SCOPE_website/).
